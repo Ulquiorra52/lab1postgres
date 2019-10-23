@@ -1,0 +1,15 @@
+Команды загрузки бекапа
+psql -U postgres countries < D:\tables.sql
+psql -U postgres countries < D:\_cities.sql
+psql -U postgres countries < D:\_countries.sql 
+psql -U postgres countries < D:\_regions.sql 
+
+
+
+Создание базы данных
+psql -U postgres 
+CREATE DATABASE countries;
+ 
+Запрос на выборку городов вашей области
+psql -U postgres countries
+SELECT * FROM public._cities where region_id = '1502117';
